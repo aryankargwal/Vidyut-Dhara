@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+# Turn on URL rewriting
+RewriteEngine on
+
+RewriteRule ^(.+)\.php$ /$1 [R,L]
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*?)/?$ /$1.php [NC,END]
+</IfModule>
+
